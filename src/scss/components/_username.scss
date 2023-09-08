@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.user-image {
+  height: 2.6rem;
+  width: 2.6rem;
+
+  &-lg {
+    height: 12rem;
+    width: 12rem;
+  }
+}

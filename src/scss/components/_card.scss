@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+.card-header {
+  & > :first-child::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: $clr-neutral-500;
+  }
+}

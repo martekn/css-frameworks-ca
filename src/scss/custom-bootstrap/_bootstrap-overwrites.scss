@@ -1,0 +1,92 @@
+@use "../abstracts" as custom;
+// Colors
+$primary: custom.$clr-primary-400;
+$secondary: custom.$clr-neutral-500;
+$light-text-emphasis: custom.$clr-neutral-700;
+$body-bg: custom.$clr-neutral-150;
+
+// button
+$btn-padding-y: custom.$space-350;
+$btn-padding-x: custom.$space-450;
+
+// nav brand
+$navbar-brand-font-size: custom.$fs-500;
+$navbar-light-brand-color: custom.$clr-neutral-700;
+$navbar-light-brand-hover-color: custom.$clr-neutral-600;
+
+// nav link
+$nav-link-padding-y: 0.5rem;
+$nav-link-padding-x: 1rem;
+$nav-link-font-size: custom.$fs-450;
+$nav-link-font-weight: custom.$fw-medium;
+$navbar-light-active-color: custom.$clr-neutral-700;
+$navbar-light-color: custom.$clr-neutral-500;
+$navbar-light-hover-color: custom.$clr-neutral-600;
+
+// Modals
+$modal-content-bg: custom.$clr-neutral-100;
+$modal-content-border-width: true;
+$modal-content-box-shadow-xs: 2 2 8 0 rgba(13, 16, 38, 0.2);
+$modal-backdrop-bg: rgba(13, 16, 38, 0.85);
+$modal-backdrop-opacity: 2;
+$modal-inner-padding: custom.$space-400;
+
+// Cards
+$card-border-width: 0px;
+$card-box-shadow: 2px 2px 8px 0px rgba(13, 16, 38, 0.2);
+$card-cap-bg: custom.$clr-neutral-100;
+$card-bg: custom.$clr-neutral-100;
+$card-spacer-y: custom.$space-450;
+$card-spacer-x: 0;
+$card-title-color: custom.$clr-neutral-700;
+$card-cap-padding-x: 0;
+$card-cap-padding-y: 0;
+$card-cap-color: custom.$clr-neutral-700;
+$card-color: custom.$clr-neutral-600;
+
+// Borders
+$border-color: custom.$clr-neutral-300;
+$border-radius: custom.$border-radius;
+$border-radius-lg: custom.$border-radius;
+$border-radius-sm: custom.$border-radius;
+
+// Input
+$input-border-color: custom.$clr-neutral-400;
+$input-bg: custom.$clr-neutral-100;
+
+// Select
+$form-select-bg: custom.$clr-neutral-200;
+$form-select-border-width: 0;
+$form-select-font-family: custom.$ff-accent;
+
+// Typography
+$font-family-base: custom.$ff-base;
+$headings-font-family: custom.$ff-accent;
+$input-btn-font-family: custom.$ff-accent;
+$input-font-family: custom.$ff-base;
+
+// gutter
+$grid-gutter-width: custom.$space-450 * 2;
+
+// spacers
+$spacer: custom.$space-400;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 4,
+);
+
+// font sizes
+$font-size-base: custom.$fs-400;
+$h1-font-size: custom.$fs-600;
+$h2-font-size: custom.$fs-500;
+$h3-font-size: custom.$fs-450;
+
+// link
+$link-decoration: none;
+$link-hover-decoration: underline;
