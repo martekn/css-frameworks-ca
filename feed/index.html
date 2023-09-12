@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed | Social</title>
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../dist/css/index.css" />
+    <script type="module" src="../src/js/main.js"></script>
+    <script type="module" src="../src/js/pages/feed.js"></script>
+  </head>
+  <body>
+    <div class="container-xxl">
+      <div class="row">
+        <nav
+          class="navbar navbar-expand-md col-12 col-md-4 col-lg-3 align-items-md-start border-end pe-md-4 pe-xl-6 py-0 py-md-7"
+          aria-label="Third navbar example"
+        >
+          <div class="container-fluid flex-md-column align-items-start px-0 ps-md-4">
+            <div
+              class="border-bottom container-fluid d-flex justify-content-between w-100 px-4 px-md-0 py-2 pb-md-3 mb-md-3 pt-mb-0"
+            >
+              <a class="navbar-brand px-md-2 fw-bold h2 mb-0" href="#">Social</a>
+              <button
+                class="navbar-toggler border-0 pe-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarsExample03"
+                aria-controls="navbarsExample03"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse px-4 px-md-0 py-2 py-md-0 w-100" id="navbarsExample03">
+              <ul class="navbar-nav me-auto mb-2 mb-sm-0 flex-column w-100">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/feed/">
+                    <i class="bi bi-house me-2"></i>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-search me-2"></i>
+                    <span>Search</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="modal" data-bs-target="#postCreationModal">
+                    <i class="bi bi-plus-square me-2"></i>
+                    <span>Create post</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-people me-2"></i>
+                    <span>My Network</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/profile/">
+                    <i class="bi bi-person me-2"></i>
+                    <span>Profile</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link"
+                    ><i class="bi bi-box-arrow-right me-2"></i> <span>Log out</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <aside class="d-none d-lg-flex col-3 order-3 border-start ps-md-4 ps-xl-6 py-4 py-md-7">
+          <div class="d-flex flex-column flex-shrink-0 w-100">
+            <div class="border-bottom pb-md-3 mb-md-3">
+              <form action="">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="search"
+                  />
+                  <button class="btn btn-outline-dark" type="button" id="search">
+                    <i class="bi bi-search"></i>
+                    <p class="visually-hidden">Search</p>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="border-bottom pb-md-3 mb-md-3">
+              <h2>Popular tags</h2>
+              <ul id="tag-list" class="list-group mb-2">
+                <!-- populated with js -->
+              </ul>
+            </div>
+            <div>
+              <h2>Following</h2>
+              <ul id="following-list" class="list-group mb-2">
+                <!-- Populated with js -->
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-12 col-md-8 col-lg-6 px-md-4 px-xl-6 py-4 py-md-7">
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <button
+                class="btn btn-link link-body-emphasis text-decoration-none text-body px-0"
+                data-bs-toggle="modal"
+                data-bs-target="#postCreationModal"
+              >
+                <i class="bi bi-plus-square me-2"></i><span>Create post</span>
+              </button>
+            </div>
+            <div class="col-auto">
+              <select class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>Latest</option>
+                <option value="1">Oldest</option>
+              </select>
+            </div>
+          </div>
+          <ul id="feed" class="list-group">
+            <!-- populated with js -->
+          </ul>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal modal-md fade"
+      id="postCreationModal"
+      tabindex="-1"
+      aria-labelledby="postCreationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content p-4">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="postCreationModalLabel">Create a post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body py-0">
+            <form action="">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="title" placeholder="Title" />
+                <label for="title" class="form-label">Title</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="media" placeholder="A link to a video or an image" />
+                <label for="media" class="form-label">Media URL</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Text" id="text" rows="10"></textarea>
+                <label for="text">Text</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link text-decoration-none fw-medium" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal end -->
+  </body>
+</html>

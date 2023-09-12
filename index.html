@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/index.css" />
+    <script type="module" src="./src/js/main.js"></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header class="p-3 border-bottom">
+      <h1 class="navbar-brand px-md-2 fw-bold h2 mb-0">Social</h1>
+    </header>
+    <main class="d-flex flex-grow-1 align-items-center">
+      <form action="/profile/" class="card form-auth w-100 m-auto">
+        <div class="card-body px-6 py-7">
+          <h2 class="h1 mb-4 fw-bold text-center">Log in</h2>
+          <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+            <label for="email">Email address</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Password"
+              minlength="8"
+              required
+            />
+            <label for="password">Password</label>
+          </div>
+          <button class="btn btn-primary w-100 mb-4" type="submit">Log in</button>
+          <p class="d-flex flex-column text-center"><span>Dont have an account?</span><a href="#" class="link-primary">Sign up</a></span></p>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

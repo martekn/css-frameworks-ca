@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.nav-item .active .bi {
+  color: $clr-neutral-600;
+
+  &.bi-house::before {
+    content: "\F424";
+  }
+
+  &.bi-search::before {
+    content: "\F787";
+  }
+
+  &.bi-people::before {
+    content: "\F4CF";
+  }
+
+  &.bi-person::before {
+    content: "\F4DA";
+  }
+}
