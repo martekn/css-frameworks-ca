@@ -25,7 +25,6 @@ export const post = (post) => {
   if (tags) {
     for (const tag of tags) {
       bodyText = bodyText.replace(tag, `<a href="#" class="link-primary">${tag}</a>`);
-      console.log(bodyText);
     }
   }
 
